@@ -1,0 +1,25 @@
+CUSTOMIZATION IDEAS
+
+Start with index.html.
+
+Change:
+
+How much do you love me?
+
+to your own question.
+
+Change:
+
+Always yours ❤️
+
+to your own ending.
+
+You can also change the colors in style.css.
+
+Main pink:
+
+--pink: #d81b60;
+
+Dark pink:
+
+--dark-pink: #8e1741;

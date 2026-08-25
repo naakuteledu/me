@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Something For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<!-- PAGE 1 -->
+<section class="screen active" id="screen1">
+  <div class="card">
+    <div class="emoji big" id="loveFace">🥺</div>
+    <p class="eyebrow">QUESTION 1</p>
+    <h1>Do you love me?</h1>
+    <p class="message">Please choose honestly... ❤️</p>
+
+    <div class="choice-row">
+      <button class="yes-btn" onclick="answerLove(true)">YES ❤️</button>
+      <button class="no-btn" id="noButton" onclick="answerLove(false)">NO</button>
+    </div>
+
+    <p id="noMessage" class="warning"></p>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="screen" id="screen2">
+  <div class="card">
+    <div class="emoji big" id="loveMeterFace">🥺</div>
+    <p class="eyebrow">QUESTION 2</p>
+    <h1>How much do you love me?</h1>
+    <p class="message">Move the slider all the way to 100. 😌</p>
+
+    <div class="love-number" id="loveNumber">0%</div>
+
+    <input
+      id="loveSlider"
+      type="range"
+      min="0"
+      max="100"
+      value="0"
+      oninput="updateLove(this.value)"
+    >
+
+    <p id="sliderMessage" class="muted">
+      That's a little low... 🥺
+    </p>
+
+    <button id="continue2" class="disabled-btn" onclick="showScreen(3)" disabled>
+      Continue ❤️
+    </button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="screen" id="screen3">
+  <div class="card">
+    <div class="emoji huge">🥹❤️</div>
+    <p class="eyebrow">QUESTION 3</p>
+    <h1>Do you want to continue?</h1>
+    <p class="message">
+      You have to say <b>YES</b> 100 times. 😈❤️
+    </p>
+
+    <div class="yes-counter">
+      <span id="yesCount">0</span> / 100
+    </div>
+
+    <button id="hundredButton" onclick="clickYes()">
+      YES ❤️
+    </button>
+
+    <p id="hundredMessage" class="muted">
+      Only 100 more... 😌
+    </p>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="screen" id="screen4">
+  <div class="card">
+    <div class="emoji huge pulse">🥺❤️</div>
+    <p class="eyebrow">OKAY... YOU WIN</p>
+    <h1>I'M SORRY</h1>
+
+    <div class="letter">
+      <p>Hey Chaitra,</p>
+
+      <p>
+        I'm really sorry for not being myself and for not
+        treating you properly these past two days.
+      </p>
+
+      <p>
+        I know I've been a little off, and you didn't deserve
+        that from me. I honestly didn't mean to hurt you or
+        make you feel bad.
+      </p>
+
+      <p>
+        I care about you a lot, and I'm sorry for the way
+        I behaved. I should have been more understanding
+        and more careful with the way I treated you.
+      </p>
+
+      <p>
+        I don't want a small bad phase to become something
+        that comes between us. I just wanted to say
+        <b>I'm genuinely sorry.</b> ❤️
+      </p>
+
+      <p>
+        I hope you can forgive me. And yes... I made you
+        click YES 100 times just so you'd have to stay
+        long enough to read this. 😂❤️
+      </p>
+
+      <p class="signature">I'm sorry. ❤️</p>
+    </div>
+
+    <button onclick="showScreen(5)">One last thing...</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="screen" id="screen5">
+  <div class="card">
+    <div class="emoji huge pulse">❤️</div>
+    <h1>I really do care about you.</h1>
+    <p class="message">
+      These two days weren't how I wanted to be with you.
+      I'm sorry.
+    </p>
+    <p class="message"><b>Can we be okay? 🥺❤️</b></p>
+    <button class="secondary" onclick="showScreen(1)">Start again ↻</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
